@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#00E5FF" # Electric Blue
+backgroundColor = "#0B132B" # Deep Dark Navy
+secondaryBackgroundColor = "#1C2541" # Slightly lighter dark blue
+textColor = "#FFFFFF"
+font = "sans serif"
