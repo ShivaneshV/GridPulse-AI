@@ -1,42 +1,32 @@
-# GridPulse AI: Sovereign Grid Intelligence Platform
+# GridPulse AI
 
-GridPulse AI is a national infrastructure solution designed to combat AT&C (Aggregate Technical & Commercial) losses through Physics-Informed Spectral Fingerprinting and Temporal Fusion Transformers.
+A proof-of-concept for detecting AT&C (Aggregate Technical & Commercial) power losses and meter bypasses using smart meter data. Built for the Karnataka Commerce & Industry hackathon.
 
-## The Problem: "Invisible Bypass"
-In standard distribution grids, illegal bypassing of meters creates massive AT&C losses. Traditional statistical models fail to detect these because the overall feeder consumption appears normal or is obscured by line losses. GridPulse AI detects these "invisible" taps mathematically.
+## Overview
 
-## Non-Negotiable Compliance (Zero-Hardware)
-This solution adheres strictly to government deployment constraints:
-- **Zero Hardware Modification**: The system requires no physical changes to existing meters or data concentrators.
-- **Interoperability**: Data is ingested via a simulated Sidecar API compliant with the **DLMS/COSEM (IEC 62056)** standard.
-- **Sovereign Security**: AES-256 encryption is implemented across the Virtual DLMS Port.
+Traditional theft detection relies on statistical anomalies, which miss subtle bypasses. GridPulse AI takes a different approach by running Fast Fourier Transforms (FFT) on power telemetry to detect the physical harmonic distortion (e.g., 300Hz arcing noise) caused by line tapping.
 
-## Core Innovation
-GridPulse AI moves beyond "Statistical Guessing" to **Physics-Informed Spectral Fingerprinting**.
-1. **Spectral Disaggregation Engine (`src/spectral`)**: Uses Fast Fourier Transforms (FFT) to isolate specific Harmonic Distortion signatures (e.g., 300Hz arcing/hooking noise) from the standard 50Hz grid load.
-2. **Temporal Fusion Transformer (`src/models/tft`)**: Predicts multi-horizon load while providing exact "Attention Heads" (Interpretability) to prove *why* the AI flagged an anomaly.
+We also use Temporal Fusion Transformers (TFT) to forecast multi-horizon loads and flag deviations at the transformer level.
 
-## Integration with K-Commerce & SWS
-GridPulse AI isn't just about detecting theft—it acts as a foundational data layer for the entire state's digital roadmap.
-- **Unique Business Identifier (UBID)**: The system uses UBID as the primary join key, cross-referencing spectral load signatures directly against commercial entity registries.
-- **Automated Lifecycle Categorization**: By analyzing specific consumption patterns, the AI automatically categorizes a business as **Active, Dormant, or Closed**. This bridges the gap between physical infrastructure (Energy) and digital governance (Theme 1 & Theme 2 of the Karnataka Commerce & Industry framework).
+## Architecture & Compliance
 
-## Quickstart / Deployment
+- **No New Hardware**: Operates entirely on existing smart meter data.
+- **DLMS/COSEM**: Data ingestion uses a simulated sidecar API that follows IEC 62056 standards.
+- **K-Commerce Integration**: Uses the Unique Business Identifier (UBID) as a primary key. By analyzing spectral load, we can automatically flag if a business registered as "Dormant" is actually running heavy machinery (Theme 1 & 2).
 
-To run the "Unbeatable Prototype" Demo for the Jury:
+## Local Setup
 
 ```bash
-# Make the setup script executable (Linux/Mac)
+# Make setup script executable
 chmod +x setup.sh
 
-# Run the script (It will install dependencies, generate sandbox data, and launch Streamlit)
+# Install requirements, generate mock data, and launch dashboard
 ./setup.sh
 ```
 
-*(Note for Windows users: You can run the commands inside `setup.sh` manually or use WSL/Git Bash).*
+## Dashboard Features
 
-## Demo Instructions (For the 5-Minute Walkthrough)
-1. **Data Analyst View**: Show the TFT Multi-Horizon forecast and SHAP feature importance.
-2. **Live Detection**: Click "Trigger Bypass Hooking Event" in the sidebar.
-3. **Forensic Card**: Watch the Spectral Analytics Engine isolate the 300Hz spike, presenting the AEE Field Engineer with a 94% Confidence Verdict and a GPS coordinate to inspect the exact pole.
-4. **Government ROI**: Conclude on the Revenue Recovery dashboard showing the projected Crores saved across the BESCOM/HESCOM cluster.
+The Streamlit interface (`src/dashboard/app.py`) includes:
+- **Map View**: Real-time plotting of grid anomalies with forensic extraction (FFT signatures).
+- **TFT View**: Multi-horizon load forecasting vs actual consumption.
+- **Revenue Dashboard**: Tracks estimated AT&C loss reduction and projected ROI.
