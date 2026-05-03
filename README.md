@@ -30,3 +30,7 @@ The Streamlit interface (`src/dashboard/app.py`) includes:
 - **Map View**: Real-time plotting of grid anomalies with forensic extraction (FFT signatures).
 - **TFT View**: Multi-horizon load forecasting vs actual consumption.
 - **Revenue Dashboard**: Tracks estimated AT&C loss reduction and projected ROI.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
