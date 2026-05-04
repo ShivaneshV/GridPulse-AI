@@ -67,13 +67,11 @@ st.markdown(f"""
         font-size: 0.9em;
         margin-top: 10px;
     }}
-    /* Ensure Streamlit Header and Deploy button are visible */
-    header {{visibility: visible !important;}}
-    .stDeployButton {{display: block !important;}}
-    [data-testid="stToolbar"] {{visibility: visible !important;}}
-    
-    /* Hide Streamlit Footer only */
+    /* Hide Streamlit branding and toolbar */
+    #MainMenu {{visibility: hidden;}}
     footer {{visibility: hidden;}}
+    [data-testid="stToolbar"] {{visibility: hidden;}}
+    [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
 </style>
 """, unsafe_allow_html=True)
 
