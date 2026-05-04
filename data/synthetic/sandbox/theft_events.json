@@ -1,0 +1,226 @@
+{
+  "MT_000051": {
+    "theft_type": "meter_tampering",
+    "start_time": "2026-04-28T00:29:01.333984",
+    "end_time": "2026-04-28T07:14:01.333984",
+    "duration_hours": 7.183376854450976,
+    "severity": 0.39437883809753493,
+    "energy_stolen_kwh": 34.80161867434529,
+    "spectral_signature": {
+      "phase_shift": 0.2,
+      "third_harmonic": 0.2,
+      "thd": 10.0,
+      "power_factor": 0.8
+    }
+  },
+  "MT_000077": {
+    "theft_type": "phase_imbalance",
+    "start_time": "2026-04-30T09:29:01.333984",
+    "end_time": "2026-04-30T11:29:01.333984",
+    "duration_hours": 2.457095511242417,
+    "severity": 0.3735793813441921,
+    "energy_stolen_kwh": 0,
+    "spectral_signature": {
+      "negative_sequence": 0.15,
+      "zero_sequence": 0.1,
+      "thd": 8.0,
+      "power_factor": 0.85
+    }
+  },
+  "MT_000059": {
+    "theft_type": "arcing",
+    "start_time": "2026-05-01T11:59:01.333984",
+    "end_time": "2026-05-01T19:14:01.333984",
+    "duration_hours": 7.585735928167146,
+    "severity": 0.2916557440675265,
+    "energy_stolen_kwh": 11.64035247601879,
+    "spectral_signature": {
+      "high_freq_noise": 0.5,
+      "inter_harmonics": 0.2,
+      "thd": 25.0,
+      "power_factor": 0.7
+    }
+  },
+  "MT_000015": {
+    "theft_type": "bypass",
+    "start_time": "2026-05-01T13:29:01.333984",
+    "end_time": "2026-05-01T18:14:01.333984",
+    "duration_hours": 5.097600788481627,
+    "severity": 0.46317565481726103,
+    "energy_stolen_kwh": 20.820087925378544,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  },
+  "MT_000007": {
+    "theft_type": "arcing",
+    "start_time": "2026-04-29T05:29:01.333984",
+    "end_time": "2026-04-29T09:44:01.333984",
+    "duration_hours": 4.610350683188297,
+    "severity": 0.21165631880959315,
+    "energy_stolen_kwh": 3.71823770240033,
+    "spectral_signature": {
+      "high_freq_noise": 0.5,
+      "inter_harmonics": 0.2,
+      "thd": 25.0,
+      "power_factor": 0.7
+    }
+  },
+  "MT_000041": {
+    "theft_type": "meter_tampering",
+    "start_time": "2026-05-01T22:29:01.333984",
+    "end_time": "2026-05-02T02:59:01.333984",
+    "duration_hours": 4.8893559315352855,
+    "severity": 0.46194628485649625,
+    "energy_stolen_kwh": 9.862442385008581,
+    "spectral_signature": {
+      "phase_shift": 0.2,
+      "third_harmonic": 0.2,
+      "thd": 10.0,
+      "power_factor": 0.8
+    }
+  },
+  "MT_000055": {
+    "theft_type": "bypass",
+    "start_time": "2026-04-28T22:29:01.333984",
+    "end_time": "2026-04-29T01:29:01.333984",
+    "duration_hours": 3.3756639626779164,
+    "severity": 0.4669199556063684,
+    "energy_stolen_kwh": 17.080002002133064,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  },
+  "MT_000034": {
+    "theft_type": "phase_imbalance",
+    "start_time": "2026-04-30T12:14:01.333984",
+    "end_time": "2026-04-30T16:59:01.333984",
+    "duration_hours": 5.1971879668659415,
+    "severity": 0.41561740281156623,
+    "energy_stolen_kwh": 0,
+    "spectral_signature": {
+      "negative_sequence": 0.15,
+      "zero_sequence": 0.1,
+      "thd": 8.0,
+      "power_factor": 0.85
+    }
+  },
+  "MT_000021": {
+    "theft_type": "bypass",
+    "start_time": "2026-04-29T09:59:01.333984",
+    "end_time": "2026-04-29T17:14:01.333984",
+    "duration_hours": 7.506911914328738,
+    "severity": 0.23856162549686336,
+    "energy_stolen_kwh": 4.975933890599208,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  },
+  "MT_000082": {
+    "theft_type": "meter_tampering",
+    "start_time": "2026-05-03T01:44:01.333984",
+    "end_time": "2026-05-03T08:14:01.333984",
+    "duration_hours": 6.960678394031736,
+    "severity": 0.47638847696936665,
+    "energy_stolen_kwh": 38.385275806444014,
+    "spectral_signature": {
+      "phase_shift": 0.2,
+      "third_harmonic": 0.2,
+      "thd": 10.0,
+      "power_factor": 0.8
+    }
+  },
+  "MT_000023": {
+    "theft_type": "bypass",
+    "start_time": "2026-05-02T11:44:01.333984",
+    "end_time": "2026-05-02T17:14:01.333984",
+    "duration_hours": 5.964501823265283,
+    "severity": 0.24575246423208316,
+    "energy_stolen_kwh": 10.961763227636105,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  },
+  "MT_000024": {
+    "theft_type": "phase_imbalance",
+    "start_time": "2026-04-27T01:29:01.333984",
+    "end_time": "2026-04-27T06:14:01.333984",
+    "duration_hours": 5.009554197211658,
+    "severity": 0.39797917080677453,
+    "energy_stolen_kwh": 0,
+    "spectral_signature": {
+      "negative_sequence": 0.15,
+      "zero_sequence": 0.1,
+      "thd": 8.0,
+      "power_factor": 0.85
+    }
+  },
+  "MT_000035": {
+    "theft_type": "bypass",
+    "start_time": "2026-04-28T06:44:01.333984",
+    "end_time": "2026-04-28T11:44:01.333984",
+    "duration_hours": 5.300915548869028,
+    "severity": 0.30457168039835547,
+    "energy_stolen_kwh": 3.7638852451178337,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  },
+  "MT_000036": {
+    "theft_type": "arcing",
+    "start_time": "2026-05-02T04:59:01.333984",
+    "end_time": "2026-05-02T09:29:01.333984",
+    "duration_hours": 4.785930281674659,
+    "severity": 0.5224748344553674,
+    "energy_stolen_kwh": 0,
+    "spectral_signature": {
+      "high_freq_noise": 0.5,
+      "inter_harmonics": 0.2,
+      "thd": 25.0,
+      "power_factor": 0.7
+    }
+  },
+  "MT_000020": {
+    "theft_type": "phase_imbalance",
+    "start_time": "2026-04-28T10:29:01.333984",
+    "end_time": "2026-04-28T14:14:01.333984",
+    "duration_hours": 4.1119603787331975,
+    "severity": 0.36716640355563523,
+    "energy_stolen_kwh": 0,
+    "spectral_signature": {
+      "negative_sequence": 0.15,
+      "zero_sequence": 0.1,
+      "thd": 8.0,
+      "power_factor": 0.85
+    }
+  },
+  "MT_000073": {
+    "theft_type": "bypass",
+    "start_time": "2026-05-01T06:14:01.333984",
+    "end_time": "2026-05-01T08:44:01.333984",
+    "duration_hours": 2.8773421386821396,
+    "severity": 0.4197685133607149,
+    "energy_stolen_kwh": 14.950042847669138,
+    "spectral_signature": {
+      "third_harmonic": 0.3,
+      "fifth_harmonic": 0.1,
+      "thd": 15.0,
+      "power_factor": 0.95
+    }
+  }
+}

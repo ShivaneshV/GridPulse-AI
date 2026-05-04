@@ -67,11 +67,13 @@ st.markdown(f"""
         font-size: 0.9em;
         margin-top: 10px;
     }}
-    /* Hide Streamlit Deploy Button, Menu, and Footer */
-    #MainMenu {{visibility: hidden;}}
+    /* Ensure Streamlit Header and Deploy button are visible */
+    header {{visibility: visible !important;}}
+    .stDeployButton {{display: block !important;}}
+    [data-testid="stToolbar"] {{visibility: visible !important;}}
+    
+    /* Hide Streamlit Footer only */
     footer {{visibility: hidden;}}
-    .stDeployButton {{display: none;}}
-    [data-testid="stToolbar"] {{visibility: hidden;}}
 </style>
 """, unsafe_allow_html=True)
 
@@ -111,8 +113,9 @@ def generate_forensic_pdf(node_id, lat, lon, anomaly_data):
 # ---------------------------------------------------------------------
 @st.cache_data
 def load_sandbox_data():
-    """Loads pre-generated synthetic sandbox data."""
-    data_dir = os.path.join(os.getcwd(), "data", "synthetic", "sandbox")
+    # Resolve data path relative to the root of the project
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    data_dir = os.path.join(base_dir, "data", "synthetic", "sandbox")
     
     # If data doesn't exist, return empty mocks
     if not os.path.exists(data_dir):
@@ -143,7 +146,12 @@ topology, theft_events, meters = load_sandbox_data()
 # Sidebar: Zero-Hardware Branding & Live Feed
 # ---------------------------------------------------------------------
 with st.sidebar:
-    st.image(r"C:\Users\HP\.gemini\antigravity\brain\cd845ba3-4763-4022-b747-a8a76ca5800e\gridpulse_logo_1777789762387.png", width=80) 
+    # Use relative path for logo to work on Cloud deployment
+    logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+    if os.path.exists(logo_path):
+        st.image(logo_path, width=80)
+    else:
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Electric_plug_symbol.svg/200px-Electric_plug_symbol.svg.png", width=50) 
     st.title("GridPulse AI")
     st.markdown("### Sovereign Grid Intelligence")
     
