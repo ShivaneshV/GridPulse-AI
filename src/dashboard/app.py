@@ -72,6 +72,8 @@ st.markdown(f"""
     footer {{visibility: hidden;}}
     [data-testid="stToolbar"] {{visibility: hidden;}}
     [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
+    [data-testid="stStatusWidget"] {{visibility: hidden;}}
+    #stDecoration {{display:none;}}
 </style>
 """, unsafe_allow_html=True)
 
